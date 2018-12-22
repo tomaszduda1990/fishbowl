@@ -1,0 +1,43 @@
+.aquarium {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	grid-column: 1 / -1;
+	grid-row: 1;
+	&__bowl {
+		height: 300px;
+		width: 300px;
+		border-radius: 50%;
+		background: $aquarium-color;
+		position: relative;
+		overflow: hidden;
+		z-index: -1;
+	}
+	&__bowl:after,
+	&__bowl:before {
+		position: absolute;
+		content: '';
+		background: $body-color;
+		height: $bowl-top-bottom;
+		width: 100%;
+		left: 0;
+		bottom: -20px;
+		z-index: 10;
+	}
+	&__bowl:before {
+		left: 0;
+		bottom: calc(100% - 40px);
+	}
+}
+@media (min-width: 700px) {
+	.aquarium {
+		grid-column: 2 / 4;
+	}
+}
+
+@media (min-width: 1150px) {
+	.aquarium__bowl {
+		height: 500px;
+		width: 500px;
+	}
+}

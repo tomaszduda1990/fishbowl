@@ -1,0 +1,17 @@
+header {
+	padding: 10px 20px;
+	h1 {
+		text-transform: uppercase;
+		text-align: center;
+		letter-spacing: $spacing-large;
+		margin: 0;
+		font-size: 30px;
+	}
+}
+@media (min-width: 1150px) {
+	header {
+		h1 {
+			font-size: $font-large;
+		}
+	}
+}

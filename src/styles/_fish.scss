@@ -1,0 +1,31 @@
+.fish {
+	height: 35px;
+	width: 35px;
+	position: absolute;
+	animation: floatingY alternate 2s infinite ease-in-out;
+	@for $i from 1 through 3 {
+		&:nth-child(4n + #{$i}) {
+			animation-duration: calc(1.2s * #{$i + 0.75});
+		}
+	}
+	background-position: center;
+	background-size: cover;
+}
+
+.fish--neonka {
+	background-image: url('./styles/assets/neonka.png');
+}
+.fish--gupik {
+	background-image: url('./styles/assets/gupik.png');
+}
+.fish--skalar {
+	background-image: url('./styles/assets/skalar.png');
+}
+@keyframes floatingY {
+	0% {
+		transform: translateY(-100%);
+	}
+	100% {
+		transform: translateY(100%);
+	}
+}

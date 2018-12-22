@@ -1,0 +1,50 @@
+html {
+	font-size: 62.5%;
+}
+* {
+	box-sizing: border-box;
+}
+body {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	background: $body-color;
+	color: $font-color;
+	font-size: $font-small;
+	display: grid;
+	grid-template-rows: 100px 1fr;
+	font-family: $font;
+}
+main {
+	width: 100%;
+	margin: 0 auto;
+	height: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+section {
+	padding: 20px;
+
+	.section-title {
+		font-style: italic;
+		margin: 0;
+		margin-bottom: 15px;
+		font-size: 18px;
+		letter-spacing: 0;
+		border-bottom: 1px solid $font-color;
+	}
+}
+
+@media (min-width: 1150px) {
+	main {
+		grid-template-columns: $side-bars 1fr 1fr $side-bars;
+	}
+	section {
+		padding: 20px;
+
+		.section-title {
+			font-size: $font-medium;
+			letter-spacing: $spacing-medium;
+		}
+	}
+}

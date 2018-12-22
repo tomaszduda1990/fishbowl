@@ -1,0 +1,57 @@
+.menu {
+	grid-column: 3 / 5;
+}
+.controls {
+	margin-bottom: 10px;
+	padding: 10px 0;
+	border: 1px solid $font-color;
+	border-radius: 15px;
+	text-align: center;
+	h6 {
+		margin: 0;
+		margin-bottom: 10px;
+		font-size: 18px;
+	}
+	&__button {
+		height: 35px;
+		width: 35px;
+		margin: 0 10px;
+		border: 1px solid $font-color;
+		border-radius: 10px;
+		background: none;
+		outline: none;
+		font: inherit;
+		color: $font-color;
+		font-weight: bold;
+		&--add {
+			background: cadetblue;
+		}
+		&--remove {
+			background: tomato;
+		}
+
+		&--add:hover,
+		&--remove:hover {
+			cursor: pointer;
+			background-color: lighten(cadetblue, 15%);
+		}
+		&--remove:hover {
+			background-color: darken(tomato, 15%);
+		}
+	}
+}
+@media (min-width: 700px) {
+	.menu {
+		grid-column: 4 / 5;
+	}
+}
+@media (min-width: 1150px) {
+	.controls {
+		padding: 10px 20px;
+		margin-bottom: 20px;
+		&__button {
+			height: 45px;
+			width: 45px;
+		}
+	}
+}
